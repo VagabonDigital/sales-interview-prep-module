@@ -1416,6 +1416,25 @@
             line-height: 1.45
         }
 
+        .challenge-detail {
+            display: none;
+            margin-top: 14px;
+            padding-top: 14px;
+            border-top: 1px solid rgba(200, 132, 58, 0.22);
+        }
+
+        .challenge-card.active .challenge-detail {
+            display: block;
+        }
+
+        .challenge-detail .task {
+            font-size: 13px;
+            color: var(--amber);
+            font-weight: 700;
+            line-height: 1.55;
+            margin: 0;
+        }
+
         /* ── QUICK RECAP ────────────────────────────────────── */
         .quick-recap {
             background: var(--navy);
@@ -2267,28 +2286,6 @@
             flex-direction: column;
             align-items: center;
             gap: 12px
-        }
-
-        /* Challenge example box */
-        .challenge-example {
-            background: var(--bg);
-            border-radius: var(--radius-sm);
-            padding: 14px 16px
-        }
-
-        .challenge-example p {
-            font-size: 13px;
-            color: var(--muted);
-            margin-bottom: 4px
-        }
-
-        .challenge-example p:last-child {
-            margin-bottom: 0
-        }
-
-        .challenge-example .task {
-            color: var(--teal);
-            font-weight: 600
         }
 
         /* ── STUDY TOOLS ────────────────────────────────────────── */
@@ -4329,311 +4326,198 @@
 
         <!-- PAGE 14 ─ SALES INTERVIEW CHALLENGE BANK ────────────────── -->
         <div class="page" id="page-14">
-            <div class="page-eyebrow">Practice</div>
+            <div class="page-eyebrow amber">Practice Upgrade</div>
             <h1 class="page-title">Sales Interview Challenge Bank</h1>
             <p class="page-subtitle">Once the answer structure is clear, try the same question with one extra
                 difficulty. Add one challenge at a time.</p>
             <p class="tap-hint">Tap any card to expand it.</p>
+
             <div class="challenge-grid mt-8">
 
-                <div class="challenge-card" onclick="this.classList.toggle('active')">
-                    <div class="challenge-icon"><svg width="16" height="16" style="color:#C8843A" viewBox="0 0 16 16"
-                            fill="none">
+                <div class="challenge-card" onclick="toggleChallengeCard(this)">
+                    <div class="challenge-icon">
+                        <svg width="16" height="16" style="color:#C8843A" viewBox="0 0 16 16" fill="none">
                             <circle cx="8" cy="8" r="6.5" stroke="currentColor" stroke-width="1.4" />
                             <path d="M8 5v4M8 11v.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-                        </svg></div>
+                        </svg>
+                    </div>
                     <div class="challenge-title">Short Answer</div>
                     <div class="challenge-quote">You have 60 seconds to answer.</div>
-                    <div class="challenge-example" style="display:none;margin-top:10px">
-                        <p class="task">Keep the full framework but cut every sentence to its minimum.</p>
+                    <div class="challenge-detail">
+                        <p class="task">Keep the full framework, but cut every sentence to its minimum.</p>
                     </div>
                 </div>
 
-                <div class="challenge-card" onclick="this.classList.toggle('active')">
-                    <div class="challenge-icon"><svg width="16" height="16" style="color:#C8843A" viewBox="0 0 16 16"
-                            fill="none">
+                <div class="challenge-card" onclick="toggleChallengeCard(this)">
+                    <div class="challenge-icon">
+                        <svg width="16" height="16" style="color:#C8843A" viewBox="0 0 16 16" fill="none">
                             <circle cx="8" cy="8" r="6.5" stroke="currentColor" stroke-width="1.4" />
                             <path d="M8 5v4M8 11v.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-                        </svg></div>
+                        </svg>
+                    </div>
                     <div class="challenge-title">30-Second Summary</div>
                     <div class="challenge-quote">&#8220;Can you summarise that in 30 seconds?&#8221;</div>
-                    <div class="challenge-example" style="display:none;margin-top:10px">
-                        <p class="task">Lead with the frame and the headline result. Cut Reflect if needed.</p>
+                    <div class="challenge-detail">
+                        <p class="task">Lead with the frame and headline result. Cut Reflect if needed.</p>
                     </div>
                 </div>
 
-                <div class="challenge-card" onclick="this.classList.toggle('active')">
-                    <div class="challenge-icon"><svg width="16" height="16" style="color:#C8843A" viewBox="0 0 16 16"
-                            fill="none">
+                <div class="challenge-card" onclick="toggleChallengeCard(this)">
+                    <div class="challenge-icon">
+                        <svg width="16" height="16" style="color:#C8843A" viewBox="0 0 16 16" fill="none">
                             <circle cx="8" cy="8" r="6.5" stroke="currentColor" stroke-width="1.4" />
                             <path d="M8 5v4M8 11v.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-                        </svg></div>
+                        </svg>
+                    </div>
                     <div class="challenge-title">Numbers First</div>
                     <div class="challenge-quote">&#8220;Can you give me the numbers first?&#8221;</div>
-                    <div class="challenge-example" style="display:none;margin-top:10px">
-                        <p class="task">Lead with the headline result, then explain the process.</p>
+                    <div class="challenge-detail">
+                        <p class="task">Lead with the headline result, then explain the process behind it.</p>
                     </div>
                 </div>
 
-                <div class="challenge-card" onclick="this.classList.toggle('active')">
-                    <div class="challenge-icon"><svg width="16" height="16" style="color:#C8843A" viewBox="0 0 16 16"
-                            fill="none">
+                <div class="challenge-card" onclick="toggleChallengeCard(this)">
+                    <div class="challenge-icon">
+                        <svg width="16" height="16" style="color:#C8843A" viewBox="0 0 16 16" fill="none">
                             <circle cx="8" cy="8" r="6.5" stroke="currentColor" stroke-width="1.4" />
                             <path d="M8 5v4M8 11v.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-                        </svg></div>
+                        </svg>
+                    </div>
                     <div class="challenge-title">Follow-Up Question</div>
                     <div class="challenge-quote">&#8220;Can you give me a specific example?&#8221;</div>
-                    <div class="challenge-example" style="display:none;margin-top:10px">
-                        <p class="task">Add one specific moment, client type, or outcome to the previous answer.</p>
-                    </div>
-                </div>
-
-                <div class="challenge-card" onclick="this.classList.toggle('active')">
-                    <div class="challenge-icon"><svg width="16" height="16" style="color:#C8843A" viewBox="0 0 16 16"
-                            fill="none">
-                            <circle cx="8" cy="8" r="6.5" stroke="currentColor" stroke-width="1.4" />
-                            <path d="M8 5v4M8 11v.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-                        </svg></div>
-                    <div class="challenge-title">Interrupted Answer</div>
-                    <div class="challenge-quote">The interviewer cuts in before you finish.</div>
-                    <div class="challenge-example" style="display:none;margin-top:10px">
-                        <p class="task">Answer the new question briefly, then return to your main point.</p>
-                    </div>
-                </div>
-
-                <div class="challenge-card" onclick="this.classList.toggle('active')">
-                    <div class="challenge-icon"><svg width="16" height="16" style="color:#C8843A" viewBox="0 0 16 16"
-                            fill="none">
-                            <circle cx="8" cy="8" r="6.5" stroke="currentColor" stroke-width="1.4" />
-                            <path d="M8 5v4M8 11v.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-                        </svg></div>
-                    <div class="challenge-title">No Perfect Metrics</div>
-                    <div class="challenge-quote">You do not have exact numbers.</div>
-                    <div class="challenge-example" style="display:none;margin-top:10px">
-                        <p class="task">Use honest approximate evidence: volume, frequency, responsibility, improvement.
+                    <div class="challenge-detail">
+                        <p class="task">Add one specific moment, client type, action, or outcome to the previous answer.
                         </p>
                     </div>
                 </div>
 
-                <div class="challenge-card" onclick="this.classList.toggle('active')">
-                    <div class="challenge-icon"><svg width="16" height="16" style="color:#C8843A" viewBox="0 0 16 16"
-                            fill="none">
+                <div class="challenge-card" onclick="toggleChallengeCard(this)">
+                    <div class="challenge-icon">
+                        <svg width="16" height="16" style="color:#C8843A" viewBox="0 0 16 16" fill="none">
                             <circle cx="8" cy="8" r="6.5" stroke="currentColor" stroke-width="1.4" />
                             <path d="M8 5v4M8 11v.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-                        </svg></div>
+                        </svg>
+                    </div>
+                    <div class="challenge-title">Interrupted Answer</div>
+                    <div class="challenge-quote">The interviewer cuts in before you finish.</div>
+                    <div class="challenge-detail">
+                        <p class="task">Answer the new question briefly, then return to your main point calmly.</p>
+                    </div>
+                </div>
+
+                <div class="challenge-card" onclick="toggleChallengeCard(this)">
+                    <div class="challenge-icon">
+                        <svg width="16" height="16" style="color:#C8843A" viewBox="0 0 16 16" fill="none">
+                            <circle cx="8" cy="8" r="6.5" stroke="currentColor" stroke-width="1.4" />
+                            <path d="M8 5v4M8 11v.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <div class="challenge-title">No Perfect Metrics</div>
+                    <div class="challenge-quote">You do not have exact numbers.</div>
+                    <div class="challenge-detail">
+                        <p class="task">Use honest approximate evidence: volume, frequency, responsibility, improvement,
+                            or client type.</p>
+                    </div>
+                </div>
+
+                <div class="challenge-card" onclick="toggleChallengeCard(this)">
+                    <div class="challenge-icon">
+                        <svg width="16" height="16" style="color:#C8843A" viewBox="0 0 16 16" fill="none">
+                            <circle cx="8" cy="8" r="6.5" stroke="currentColor" stroke-width="1.4" />
+                            <path d="M8 5v4M8 11v.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                        </svg>
+                    </div>
                     <div class="challenge-title">Challenge on Result</div>
                     <div class="challenge-quote">&#8220;Why do you think that worked?&#8221;</div>
-                    <div class="challenge-example" style="display:none;margin-top:10px">
-                        <p class="task">Go deeper on the Explain step. Name the one thing that made the biggest
+                    <div class="challenge-detail">
+                        <p class="task">Go deeper on the Explain step. Name the one action that made the biggest
                             difference.</p>
                     </div>
                 </div>
 
-                <div class="challenge-card" onclick="this.classList.toggle('active')">
-                    <div class="challenge-icon"><svg width="16" height="16" style="color:#C8843A" viewBox="0 0 16 16"
-                            fill="none">
+                <div class="challenge-card" onclick="toggleChallengeCard(this)">
+                    <div class="challenge-icon">
+                        <svg width="16" height="16" style="color:#C8843A" viewBox="0 0 16 16" fill="none">
                             <circle cx="8" cy="8" r="6.5" stroke="currentColor" stroke-width="1.4" />
                             <path d="M8 5v4M8 11v.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-                        </svg></div>
+                        </svg>
+                    </div>
                     <div class="challenge-title">Lost Deal</div>
                     <div class="challenge-quote">You need to discuss failure without blaming the client.</div>
-                    <div class="challenge-example" style="display:none;margin-top:10px">
-                        <p class="task">Focus entirely on what you controlled and what you changed afterwards.</p>
+                    <div class="challenge-detail">
+                        <p class="task">Focus on what you controlled, what you learned, and what you changed afterwards.
+                        </p>
                     </div>
                 </div>
 
-                <div class="challenge-card" onclick="this.classList.toggle('active')">
-                    <div class="challenge-icon"><svg width="16" height="16" style="color:#C8843A" viewBox="0 0 16 16"
-                            fill="none">
+                <div class="challenge-card" onclick="toggleChallengeCard(this)">
+                    <div class="challenge-icon">
+                        <svg width="16" height="16" style="color:#C8843A" viewBox="0 0 16 16" fill="none">
                             <circle cx="8" cy="8" r="6.5" stroke="currentColor" stroke-width="1.4" />
                             <path d="M8 5v4M8 11v.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-                        </svg></div>
+                        </svg>
+                    </div>
                     <div class="challenge-title">Missed Target</div>
                     <div class="challenge-quote">You need to explain a missed goal with ownership.</div>
-                    <div class="challenge-example" style="display:none;margin-top:10px">
+                    <div class="challenge-detail">
                         <p class="task">Acknowledge what happened, explain the context briefly, then show what you
                             changed.</p>
                     </div>
                 </div>
 
-                <div class="challenge-card" onclick="this.classList.toggle('active')">
-                    <div class="challenge-icon"><svg width="16" height="16" style="color:#C8843A" viewBox="0 0 16 16"
-                            fill="none">
+                <div class="challenge-card" onclick="toggleChallengeCard(this)">
+                    <div class="challenge-icon">
+                        <svg width="16" height="16" style="color:#C8843A" viewBox="0 0 16 16" fill="none">
                             <circle cx="8" cy="8" r="6.5" stroke="currentColor" stroke-width="1.4" />
                             <path d="M8 5v4M8 11v.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-                        </svg></div>
+                        </svg>
+                    </div>
                     <div class="challenge-title">Avoid Arrogance</div>
                     <div class="challenge-quote">You need to talk about success without sounding boastful.</div>
-                    <div class="challenge-example" style="display:none;margin-top:10px">
+                    <div class="challenge-detail">
                         <p class="task">Let the evidence do the work. Describe what happened, not how impressive it was.
                         </p>
                     </div>
                 </div>
 
-                <div class="challenge-card" onclick="this.classList.toggle('active')">
-                    <div class="challenge-icon"><svg width="16" height="16" style="color:#C8843A" viewBox="0 0 16 16"
-                            fill="none">
+                <div class="challenge-card" onclick="toggleChallengeCard(this)">
+                    <div class="challenge-icon">
+                        <svg width="16" height="16" style="color:#C8843A" viewBox="0 0 16 16" fill="none">
                             <circle cx="8" cy="8" r="6.5" stroke="currentColor" stroke-width="1.4" />
                             <path d="M8 5v4M8 11v.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-                        </svg></div>
+                        </svg>
+                    </div>
                     <div class="challenge-title">Avoid Vagueness</div>
                     <div class="challenge-quote">You need to replace general claims with specific evidence.</div>
-                    <div class="challenge-example" style="display:none;margin-top:10px">
-                        <p class="task">Replace every &#8220;I&#8217;m good at&#8221; or &#8220;I always&#8221; with a
-                            result, example, or behaviour.</p>
+                    <div class="challenge-detail">
+                        <p class="task">Replace every vague claim with a result, example, behaviour, responsibility, or
+                            outcome.</p>
                     </div>
                 </div>
 
-                <div class="challenge-card" onclick="this.classList.toggle('active')">
-                    <div class="challenge-icon"><svg width="16" height="16" style="color:#C8843A" viewBox="0 0 16 16"
-                            fill="none">
+                <div class="challenge-card" onclick="toggleChallengeCard(this)">
+                    <div class="challenge-icon">
+                        <svg width="16" height="16" style="color:#C8843A" viewBox="0 0 16 16" fill="none">
                             <circle cx="8" cy="8" r="6.5" stroke="currentColor" stroke-width="1.4" />
                             <path d="M8 5v4M8 11v.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-                        </svg></div>
+                        </svg>
+                    </div>
                     <div class="challenge-title">Role Fit</div>
                     <div class="challenge-quote">You need to connect the answer back to the job.</div>
-                    <div class="challenge-example" style="display:none;margin-top:10px">
-                        <p class="task">End every answer with one sentence linking your experience to the role&#8217;s
-                            client type, sales cycle, or challenge.</p>
+                    <div class="challenge-detail">
+                        <p class="task">End the answer with one sentence linking your experience to the role, client
+                            type, sales cycle, or challenge.</p>
                     </div>
                 </div>
 
             </div>
+
             <div class="card mt-20">
                 <div class="section-label mb-8">How to use these</div>
                 <p style="font-size:14px;color:var(--muted);line-height:1.65">Choose one prompt from the Practice Prompt
                     Library and one challenge from this page. Practise using one skill or the full framework. Add one
                     challenge at a time. The goal is not to sound perfect. The goal is to sound credible, specific,
                     calm, and relevant under interview pressure.</p>
-            </div>
-        </div>
-
-        <!-- PAGE 15 ─ WHAT GOOD LOOKS LIKE ─────────────────────────── -->
-        <div class="page" id="page-15">
-            <div class="page-eyebrow">Practice &amp; Reference</div>
-            <h1 class="page-title">What Good Sales Interview Answers Look Like</h1>
-            <p class="page-subtitle">A strong sales interview answer is clear, specific, credible, and connected to the
-                role.</p>
-            <div class="good-list mt-8">
-                <div class="good-item">
-                    <div class="good-num">1</div>
-                    <div>
-                        <div class="good-title">Clear frame</div>
-                        <div class="good-phrase">The answer starts with structure, not rambling.</div>
-                    </div>
-                </div>
-                <div class="good-item">
-                    <div class="good-num">2</div>
-                    <div>
-                        <div class="good-title">Evidence density</div>
-                        <div class="good-phrase">The student uses results, examples, metrics, responsibility, or
-                            outcomes.</div>
-                    </div>
-                </div>
-                <div class="good-item">
-                    <div class="good-num">3</div>
-                    <div>
-                        <div class="good-title">Sales process</div>
-                        <div class="good-phrase">The answer shows how the student sells, not only what happened.</div>
-                    </div>
-                </div>
-                <div class="good-item">
-                    <div class="good-num">4</div>
-                    <div>
-                        <div class="good-title">Client awareness</div>
-                        <div class="good-phrase">The answer shows understanding of client needs, objections, decisions,
-                            and follow-up.</div>
-                    </div>
-                </div>
-                <div class="good-item">
-                    <div class="good-num">5</div>
-                    <div>
-                        <div class="good-title">Calm ownership</div>
-                        <div class="good-phrase">Challenges are answered without blame or defensiveness.</div>
-                    </div>
-                </div>
-                <div class="good-item">
-                    <div class="good-num">6</div>
-                    <div>
-                        <div class="good-title">Process clarity</div>
-                        <div class="good-phrase">The interviewer can understand how the candidate produced the result.
-                        </div>
-                    </div>
-                </div>
-                <div class="good-item">
-                    <div class="good-num">7</div>
-                    <div>
-                        <div class="good-title">Relevant fit</div>
-                        <div class="good-phrase">The answer connects experience to the role.</div>
-                    </div>
-                </div>
-                <div class="good-item">
-                    <div class="good-num">8</div>
-                    <div>
-                        <div class="good-title">Concise delivery</div>
-                        <div class="good-phrase">The answer gives enough detail without becoming a long story.</div>
-                    </div>
-                </div>
-            </div>
-            <div class="card mt-20">
-                <div class="section-label mb-8">Strong Sales Interview Checklist</div>
-                <p style="font-size:13.5px;color:var(--muted);margin-bottom:14px">A strong sales interview answer
-                    usually does most of these:</p>
-                <div class="checklist">
-                    <div class="checklist-item"><svg width="12" height="12" style="color:#2D8F87">
-                            <use href="#icon-check-sm" />
-                        </svg>answers the question directly</div>
-                    <div class="checklist-item"><svg width="12" height="12" style="color:#2D8F87">
-                            <use href="#icon-check-sm" />
-                        </svg>frames the answer clearly</div>
-                    <div class="checklist-item"><svg width="12" height="12" style="color:#2D8F87">
-                            <use href="#icon-check-sm" />
-                        </svg>uses evidence or examples</div>
-                    <div class="checklist-item"><svg width="12" height="12" style="color:#2D8F87">
-                            <use href="#icon-check-sm" />
-                        </svg>includes numbers when possible</div>
-                    <div class="checklist-item"><svg width="12" height="12" style="color:#2D8F87">
-                            <use href="#icon-check-sm" />
-                        </svg>explains the sales process</div>
-                    <div class="checklist-item"><svg width="12" height="12" style="color:#2D8F87">
-                            <use href="#icon-check-sm" />
-                        </svg>avoids vague confidence claims</div>
-                    <div class="checklist-item"><svg width="12" height="12" style="color:#2D8F87">
-                            <use href="#icon-check-sm" />
-                        </svg>does not exaggerate results</div>
-                    <div class="checklist-item"><svg width="12" height="12" style="color:#2D8F87">
-                            <use href="#icon-check-sm" />
-                        </svg>handles challenges without blame</div>
-                    <div class="checklist-item"><svg width="12" height="12" style="color:#2D8F87">
-                            <use href="#icon-check-sm" />
-                        </svg>shows learning or judgement</div>
-                    <div class="checklist-item"><svg width="12" height="12" style="color:#2D8F87">
-                            <use href="#icon-check-sm" />
-                        </svg>connects to the role</div>
-                    <div class="checklist-item"><svg width="12" height="12" style="color:#2D8F87">
-                            <use href="#icon-check-sm" />
-                        </svg>sounds prepared but not memorised</div>
-                    <div class="checklist-item"><svg width="12" height="12" style="color:#2D8F87">
-                            <use href="#icon-check-sm" />
-                        </svg>stays clear when interrupted or asked for numbers</div>
-                </div>
-            </div>
-            <div class="mini-example mt-16">
-                <div class="mini-example-label">Example Strong Response</div>
-                <div class="client-label">Weak</div>
-                <div class="client-quote">&#8220;I&#8217;m good at sales because I like people and I always try to reach
-                    my targets.&#8221;</div>
-                <div class="client-label mt-10">Stronger</div>
-                <div class="response-text">&#8220;I&#8217;m strongest in consultative sales. In my last role, I managed
-                    a pipeline of around 60 active prospects and exceeded my quarterly target by 18%. The main reason
-                    was that I improved qualification and follow-up, so I focused more time on the opportunities with a
-                    clear business need. That experience is relevant here because this role also requires structured
-                    pipeline management and consultative client conversations.&#8221;</div>
-            </div>
-            <div class="optional-q mt-16">
-                <div class="optional-q-label">Tone note</div>
-                <div class="optional-q-text">Good sales interview English sounds specific, calm, and credible &#8212;
-                    not vague, scripted, arrogant, desperate, or generic.</div>
             </div>
         </div>
 
@@ -5385,14 +5269,17 @@
             toggle.classList.toggle('open');
         }
 
-        document.addEventListener('click', function (e) {
-            const card = e.target.closest('.challenge-card');
-            if (!card) return;
-            const example = card.querySelector('.challenge-example');
-            if (example) {
-                example.style.display = card.classList.contains('active') ? 'block' : 'none';
+        function toggleChallengeCard(card) {
+            const wasActive = card.classList.contains('active');
+
+            document.querySelectorAll('.challenge-card').forEach(function (c) {
+                c.classList.remove('active');
+            });
+
+            if (!wasActive) {
+                card.classList.add('active');
             }
-        });
+        }
 
         document.addEventListener('keydown', function (e) {
             if (e.key === 'Escape') closeJump();
